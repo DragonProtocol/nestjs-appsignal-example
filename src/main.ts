@@ -10,7 +10,7 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   app.use(appsignalExpressMiddleware(appsignal));
-  app.useGlobalFilters(new AllExceptionFilter());
+  //app.useGlobalFilters(new AllExceptionFilter());
 
   await app.listen(3000);
 }
